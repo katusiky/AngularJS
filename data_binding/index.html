@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app='MyFirstApp'>
+<head>
+  <meta charset='utf-8'>
+	<title>Two Way Data Binding</title>
+	<script src="../angular.min.js"></script>
+	<script src="controller.js"></script>
+</head>
+<body ng-controller='FirstController'>
+	<input type="text" ng-model='newComment.comment'><br>
+	<input type="text" ng-model='newComment.username'><br>
+	<button ng-click='addComment()'>Agregar Comentario</button>
+	<h3>Comentarios</h3>
+	<ul>
+		<li ng-repeat='comment in comments'>
+			{{comment.comment}} - <strong>{{comment.username}}</strong>
+		</li>
+	</ul>
+</body>
+</html>
