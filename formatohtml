@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app='app' lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body ng-controller='Controller'>
+	
+
+	<!-- SCRIPTS -->
+<script src="../angular.min.js"></script>
+<script src="../angular-local-storage.min.js"></script>
+<script src="controller.js"></script>
+	<!-- SCRIPTS -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<style>
+	.hover{
+		background-color: #CA0E2B
+	}
+	.no-hover{
+		background-color: #254AD5
+	}
+</style>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+	<!--
+	<button ng-mouseover='flag = true' ng-mouseout='flag = false' ng-class="{'hover': flag, 'no-hover': !flag}">
+		Over me
+	</button> 
+	-->
+	<button ng-click='flag = !flag' ng-class="{'hover': flag, 'no-hover': !flag}">
+		Over me
+	</button> 
+
+	<span ng-show='flag'>&lt;- click me</span>
+
+	<p>
+		{{flag | json}}
+	</p>
+
+	<!-- SCRIPTS -->
+<script src="../angular.min.js"></script>
+	<!-- SCRIPTS -->
+</body>
+</html>

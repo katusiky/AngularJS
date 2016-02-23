@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='mainModule'>
+<head>
+	<meta charset="UTF-8">
+	<title>$apply</title>
+	<script src='../angular.min.js'></script>
+	<script> 
+	angular
+		.module('mainModule', [])
+		.controller('mainController', function ($scope) {
+			$scope.name = 'Jose';
+			setTimeout(function(){
+				$scope.$apply(function(){
+				$scope.name= 'De leon'
+				});
+			}, 2000)
+			document.querySelector('#my_button').addEventListener('click', function () {
+				$scope.name = 'De leon'
+			})
+		})
+	</script>
+</head>
+<body ng-controller='mainController'>
+
+	<h1>{{name}}</h1>
+	<button id="my_button">Click</button>
+	
+</body>
+</html>

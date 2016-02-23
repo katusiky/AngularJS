@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app='Filters' lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Filters</title>
+</head>
+<body ng-controller='FiltersController'>
+	
+	{{ my_html | json }}
+
+	<p> 
+	{{costo | currency:'Bsf. '}}
+	</p>
+
+	<!-- SCRIPTS -->
+<script src="../angular.min.js"></script>
+<script src="../angular-local-storage.min.js"></script>
+<script src="controller.js"></script>
+	<!-- SCRIPTS -->
+</body>
+</html>

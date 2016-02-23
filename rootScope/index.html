@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='app' lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rootScope ChildController</title>
+</head>
+<body ng-controller='Controller'>
+	{{name}}, 
+
+	<strong>{{$parent.name}}</strong>
+	<div ng-controller='childController'>
+		{{name}}
+		<input type="text" ng-model='$parent.name'>
+	</div>
+
+	<!-- SCRIPTS -->
+<script src="../angular.min.js"></script>
+<script src="../angular-local-storage.min.js"></script>
+<script src="controller.js"></script>
+	<!-- SCRIPTS -->
+</body>
+</html>
