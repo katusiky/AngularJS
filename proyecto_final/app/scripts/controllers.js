@@ -13,22 +13,24 @@ angular
 			});
 		}
 	})
-	.controller('PostController', function ($scope, Posts, $routeParams) {
-		$scope.title= 'Editar Post'
+	.controller('PostController', function ($scope, Posts, $routeParams, $location) {
+		$scope.title= 'Editar Post';
 		$scope.post = Posts.get({id: $routeParams.id});
 		$scope.savePost = function () {
-			Posts.update({{id: $scope.post.id}},{data: $scope.post}, function (post) {
+			Posts.update({id: $scope.post.id},{data: $scope.post}, function (post) {
 				console.log(post);
+				$location.path('/post/' + $scope.post.id);
 			});
 		};
 	})
-	.controller('NewPostController', function ($scope, Posts) {
+	.controller('NewPostController', function ($scope, Posts, $location) {
 		$scope.post = {};
 		$scope.title = 'Crear Post'
 		$scope.savePost = function () {
 			Posts.save({data: $scope.post}, function (post) {
 				$scope.post = {};
 				console.log(post);
+				$location.path('/');
 			});
 		};
 	})
