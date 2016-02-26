@@ -1,0 +1,29 @@
+.formulario{
+	margin-top: 100px;
+}
+.fixeado{
+	position: fixed;
+	z-index: 1000000;
+	width: 100%;
+}
+.localizacion{
+	margin-top: 63.333px;
+}
+.divImg{
+	width: 154px;
+}
+*{
+	text-decoration: none;
+}
+a,a:visited{
+	color:inherit;
+}
+.header a{
+	color: white;
+}
+.read-more{
+	color: black;
+}
+.top-space{
+	margin-top: 1em;
+}

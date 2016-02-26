@@ -1,0 +1,72 @@
+<!doctype html>
+<html ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <link rel="stylesheet" href="bower_components/lumx/dist/lumx.css">
+
+  </head>
+  <body>
+
+    <nav class='fixeado'>
+      <div class="bgc-blue-900 tc-white" flex-container='row' flex-align='center center'>
+        <div flex-item='4'>
+          <h1 class="fs-display-3 display-block">Posts App</h1>
+        </div>
+        <div flex-item='1' class='header'>
+          <a href="#/">Inicio</a>
+        </div>
+        <div flex-item='1' class='header'>
+          <a href="#/posts/new">Crear Post</a>
+        </div>
+      </div>
+    </nav>
+
+    <div flex-container='row' flex-align='center' >
+      <div ng-view flex-item='9'>
+
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/velocity/velocity.js"></script>
+    <script src="/bower_components/velocity/velocity.ui.js"></script>
+    <script src="/bower_components/lumx/dist/lumx.js"></script>
+
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/resources.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/services.js"></script>
+    <script src="scripts/directives.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

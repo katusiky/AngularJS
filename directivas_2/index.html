@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app='app' lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	.circular{
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		}
+	.no-list li{
+		list-style-type: none;
+	}
+	body, html{
+		text-align: center;
+		background-color: #eee;
+		margin: 0px;
+	}
+	</style>
+</head>
+<body ng-controller='Controller'>
+	<input type="text" my-autocomplete='repos' placeholder='Buscar Directiva'>
+	<button ng-click='mainRepo = null'>Limpiar</button>
+
+	<ul class='no-list' ng-cloak>
+		<li ng-repeat='repo in posts' ng-hide='mainRepo && mainRepo != repo.name'>
+			<div class="circular" back-img='{{repo.owner.avatar_url}}'>	</div>
+			<h1 class="inline-block">
+				{{repo.name}}
+			</h1>
+		</li>
+	</ul>
+
+
+	<!-- SCRIPTS -->
+<script src="../angular.min.js"></script>
+<script src="controller.js"></script>
+<script src="../jquery-1.12.1.js"></script>
+<script src="../jquery-ui.min.js"></script>
+	<!-- SCRIPTS -->
+</body>
+</html>
